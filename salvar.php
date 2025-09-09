@@ -6,7 +6,7 @@ $db   = getenv('DB_NAME');
 $user = getenv('DB_USER');
 $pass = getenv('DB_PASS');
 
-// Conexão com o banco
+// Conexão com o banco PostgreSQL
 $conn = pg_connect("host=$host port=$port dbname=$db user=$user password=$pass");
 
 if (!$conn) {
@@ -61,7 +61,7 @@ if ($row_mimo['total'] >= $limites[$mimo]) {
     die("❌ Limite atingido para o mimo $mimo! Escolha outra opção.");
 }
 
-// Se não passou do limite, insere no banco
+// Insere no banco se não ultrapassou o limite
 $result = pg_query_params($conn,
     "INSERT INTO convidados (nome, fralda, mimo) VALUES ($1, $2, $3)",
     [$nome, $fralda, $mimo]
