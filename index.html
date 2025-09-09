@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Chá de Bebê da Cecília</title>
+  <style>
+    body {
+      background-color: #ffe6f2; /* rosa claro */
+      font-size: 150%; /* aumenta toda a fonte em 50% */
+      text-align: center; /* centraliza o conteúdo */
+      font-family: Arial, sans-serif;
+    }
+    form {
+      display: inline-block; /* mantém o formulário centralizado */
+      text-align: left; /* mas alinha os textos internos */
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #cc0066;
+    }
+    button {
+      background: #cc0066;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    button:hover {
+      background: #99004d;
+    }
+  </style>
+</head>
+<body>
+  <h2>Lista do Chá de Bebê 🎀</h2>
+
+  <form action="salvar.php" method="post">
+    <label>Nome:</label><br>
+    <input type="text" name="nome" required><br><br>
+
+    <label>Escolha a fralda:</label><br>
+    <select name="fralda" required>
+      <option value="">Selecione...</option>
+      <option value="P">Fralda P</option>
+      <option value="M">Fralda M</option>
+      <option value="G">Fralda G</option>
+    </select><br>
+
+    <!-- Observação sobre as marcas -->
+    <small>
+        ✅ As fraldas devem ser das marcas: <br>
+      <strong>Pampers Premium Care</strong>, <strong>Personal Baby Premium</strong> ou <strong>Babysec</strong>.
+    </small>
+    <br><br>
+
+    <label>Escolha um mimo:</label><br>
+    <select name="mimo" required>
+      <option value="">Selecione...</option>
+      <option value="Lenço Umedecido">Lenço Umedecido</option>
+      <option value="Pomada">Pomada</option>
+      <option value="Sabonete Líquido">Sabonete Líquido</option>
+    </select><br><br>
+
+    <button type="submit">Enviar 🎁</button>
+  </form>
+</body>
+</html>
