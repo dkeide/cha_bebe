@@ -1,19 +1,19 @@
 <?php
-// Configuração do banco
-$host = "dpg-d306hnripnbc73dg0t3g-a";
-$port = "5432";
-$db   = "cha_bebe";   // banco
-$user = "cha_bebe_user";   // usuário
-$pass = "WkgVfJMEBX5kTLZqLiNKY7JlOnKfMHt5";  // senha
+// Configuração do banco usando variáveis de ambiente
+$host = getenv('DB_HOST');
+$port = getenv('DB_PORT');
+$db   = getenv('DB_NAME');
+$user = getenv('DB_USER');
+$pass = getenv('DB_PASS');
 
-// Conexão com o Render
+// Conexão com o banco
 $conn = pg_connect("host=$host port=$port dbname=$db user=$user password=$pass");
 
 if (!$conn) {
     die("Erro na conexão com o PostgreSQL.");
 }
 
-// ---------- CRIAR TABELA SE NÃO EXISTIR ---------- //
+// ---------- CRIAR TABELA  ---------- //
 $criarTabela = "
 CREATE TABLE IF NOT EXISTS convidados (
     id SERIAL PRIMARY KEY,
