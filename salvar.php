@@ -32,9 +32,9 @@ try {
 
     // ---------- LIMITES ---------- //
     $limites = [
-        "P" => 15,
+        "P" => 10,
         "M" => 25,
-        "G" => 20,
+        "G" => 25,
         "Lenço Umedecido" => 25,
         "Pomada" => 25,
         "Sabonete Líquido" => 10
@@ -66,7 +66,7 @@ try {
         ':mimo' => $mimo
     ]);
 
-    echo "<p style='font-size: 50px; font-weight: bold;'>
+    echo "<p style='font-size: 24px; font-weight: bold;'>
 🎉 Obrigado, $nome! Sua presença foi confirmada.
 </p>";
 
@@ -74,4 +74,5 @@ try {
     echo "Erro ao conectar ou salvar: " . $e->getMessage();
 }
 ?>
+
 
