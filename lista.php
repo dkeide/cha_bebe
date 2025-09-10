@@ -55,11 +55,12 @@ try {
         </tr>
         <?php foreach($convidados as $c): ?>
         <tr>
-            <td><?= htmlspecialchars($c['id']) ?></td>
-            <td><?= htmlspecialchars($c['nome']) ?></td>
-            <td><?= htmlspecialchars($c['fralda']) ?></td>
-            <td><?= htmlspecialchars($c['mimo']) ?></td>
-        </tr>
+    <td><?= htmlspecialchars($c['id']) ?></td>
+    <td><?= htmlspecialchars($c['nome']) ?></td>
+    <td><?= htmlspecialchars($c['fralda']) ?></td>
+    <td><?= htmlspecialchars($c['mimo']) ?></td>
+    <td><a href="excluir.php?id=<?= $c['id'] ?>" onclick="return confirm('Tem certeza que deseja excluir?')">❌ Excluir</a></td>
+</tr>
         <?php endforeach; ?>
     </table>
 
@@ -79,3 +80,4 @@ try {
     </ul>
 </body>
 </html>
+
