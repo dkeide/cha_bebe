@@ -66,9 +66,12 @@ try {
         ':mimo' => $mimo
     ]);
 
-    echo "🎉 Obrigado, $nome! Sua presença foi confirmada.";
+    echo "<p style='font-size: 50px; font-weight: bold;'>
+🎉 Obrigado, $nome! Sua presença foi confirmada.
+</p>";
 
 } catch (PDOException $e) {
     echo "Erro ao conectar ou salvar: " . $e->getMessage();
 }
 ?>
+
