@@ -66,7 +66,7 @@ try {
         ':mimo' => $mimo
     ]);
 
-    echo "<p style='font-size: 24px; font-weight: bold;'>
+    echo "<p style='font-size: 23px; font-weight: bold;'>
 🎉 Obrigado, $nome! Sua presença foi confirmada.
 </p>";
 
@@ -74,5 +74,6 @@ try {
     echo "Erro ao conectar ou salvar: " . $e->getMessage();
 }
 ?>
+
 
 
